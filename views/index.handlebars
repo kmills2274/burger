@@ -1,0 +1,75 @@
+<div class ="container text-center">
+
+  <img src="https://i.pinimg.com/564x/5d/f6/d6/5df6d6add776ededc89fce1b751195e1.jpg" width="320" height="212">
+  <img src="https://www.dailynews.com/wp-content/uploads/2019/06/LDN-L-GOODBURGER-0621-1.jpg?w=1569" width="320" height="212">
+  <img src="https://consequenceofsound.net/wp-content/uploads/2019/05/good-burger-returns-kenan-kel-all-that-reunion-revival.png?w=807&is-pending-load=1" width="320" height="212">
+  
+  
+
+  <h1>Welcome to <span class="title-span">GOOD BURGER</span></h1>
+  <h2>HOME OF THE <span class="title-span">GOOD BURGER</span></h2>
+  <h3>Can I take your order?!</h3>
+  
+  <div class="row">
+    <div class="col-lg-12">
+      <form id="add" action="/api/burgers/" method="POST">
+       <textarea name="burger_name" id="addBurger" style="margin-top: 0px; margin-bottom: 0px; height: 225px;"></textarea>
+        <button class="btn" id="submit1" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftside">
+                    <h3><strong>Your order:</strong></h3>
+                    <h4>Send order to cook by clicking the <span class="fa fa-paper-plane"></span> button.</h4>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+
+                        <span><h5><strong> {{this.id}} - {{this.burger_name}}</strong></h5></span>
+                        <button type="button" class="place-order btn btn-warning" id="place-order" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-paper-plane"></span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightside">
+                  <h3><strong>Ready for Pick Up:</strong></h3>
+                  <h4>Pick up your order by clicking the <span class="fa fa-plus"></span> button.</h4>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <span><h5><strong> {{this.id}} - {{this.burger_name}}</strong></h5></span>
+                        <button type="button" class="order-ready btn btn-warning" id="order-ready" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}"><span class="fa fa-plus"></span></button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="text-center">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rVTw5LK1zsQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+</div>

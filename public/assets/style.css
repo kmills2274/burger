@@ -1,0 +1,94 @@
+html, body, .container {
+	height: 100%;
+}
+
+.container {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+body {
+	background-color: #F57C13;
+	color: white;
+}
+
+img {
+	display: inline;
+	margin: 0 auto;
+}
+
+h1 {
+    font-size: 80px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 60px;
+	color: yellow;
+}
+
+h3 {
+	font-size: 40px;
+	color: rgb(182, 18, 18);
+}
+
+h4 {
+	font-size: 35px;
+	color: yellow;
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+}
+
+span.title-span {
+	color: rgb(182, 18, 18);
+	font-weight: bold;
+	-webkit-text-stroke-width: 2px;
+  	-webkit-text-stroke-color: white;
+}
+
+button {
+	margin-top: 15px;
+	margin-right: 15px;
+	background-color: yellow;
+}
+
+.btn{
+	background-color: yellow;
+}
+
+span.fa {
+	color: black;
+}
+
+#update {
+	text-align: center;
+}
+
+#add {
+	display: block;
+	text-align: center;
+	height: 10%;
+}
+
+#add>textarea {
+	width: 60%;
+	height: 100%;
+	color: black;
+}
+
+#add>button {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+
+.devoured {
+	width: 100%;
+
+}
+
+
+
