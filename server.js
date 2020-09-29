@@ -1,4 +1,6 @@
 var express = require("express");
+var bodyParser = require("body-parser");
+var exphbs = require("express-handlebars");
 
 var PORT = process.env.PORT || 8000;
 var app = express();
@@ -6,8 +8,8 @@ var app = express();
 app.use(express.static("public"));
 
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 var exphbs = require("express-handlebars");
 
