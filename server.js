@@ -23,3 +23,8 @@ app.use("/", routes);
 app.listen(PORT, function() {
   console.log("Listening on port:%s", PORT);
 });
+
+server.on('clientError', (err, socket) => {
+  console.error(err);
+  socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
+});
